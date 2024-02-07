@@ -1,3 +1,5 @@
+import Private from './components/componentProps/Private';
+import Profile from './components/componentProps/Profile';
 import User from './components/context/User';
 import { UserContextProvider } from './components/context/UserContext';
 import Counter from './components/state/Counter';
@@ -12,9 +14,12 @@ export function App2() {
 
       {/* <Counter /> */}
 
-      <UserContextProvider>
+      {/* <UserContextProvider>
         <User />
-      </UserContextProvider>
+      </UserContextProvider> */}
+
+      {/* ---------component prop--------- */}
+      <Private isLoggedIn={true} component={Profile} />
     </div>
   );
 }
