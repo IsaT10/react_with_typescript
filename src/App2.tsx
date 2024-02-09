@@ -1,3 +1,4 @@
+import List from './components/Generic/List';
 import Private from './components/componentProps/Private';
 import Profile from './components/componentProps/Profile';
 import User from './components/context/User';
@@ -19,7 +20,25 @@ export function App2() {
       </UserContextProvider> */}
 
       {/* ---------component prop--------- */}
-      <Private isLoggedIn={true} component={Profile} />
+      {/* <Private isLoggedIn={true} component={Profile} /> */}
+
+      {/* generic */}
+      <List items={['table', 'chair']} onClick={(item) => console.log(item)} />
+      <List items={[1, 2]} onClick={(item) => console.log(item)} />
+
+      <List
+        items={[
+          {
+            first: 'Rakib',
+            last: 'Uddin',
+          },
+          {
+            first: 'Jhon',
+            last: 'Doe',
+          },
+        ]}
+        onClick={(item) => console.log(item)}
+      />
     </div>
   );
 }
